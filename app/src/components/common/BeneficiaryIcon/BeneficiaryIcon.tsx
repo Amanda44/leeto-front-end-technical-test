@@ -16,7 +16,7 @@ export const BeneficiaryIcon = ({ type }: { type: Beneficiary["type"] }) => {
   };
 
   return (
-    <div className="bg-grey-50 w-8 h-8 rounded-full flex items-center justify-center">
+    <div className="bg-grey-50 border-2 border-white w-8 h-8 rounded-full flex items-center justify-center">
       {getBeneficiaryIcon()}
     </div>
   );
