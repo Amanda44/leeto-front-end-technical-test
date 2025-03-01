@@ -1,0 +1,1 @@
+export { GiftCardDescription } from "./GiftCardDescription";
