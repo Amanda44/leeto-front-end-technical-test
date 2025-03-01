@@ -1,0 +1,1 @@
+export { BeneficiaryIcon } from "./BeneficiaryIcon";
