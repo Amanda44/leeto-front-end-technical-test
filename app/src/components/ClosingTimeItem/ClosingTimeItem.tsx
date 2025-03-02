@@ -12,23 +12,40 @@ export const ClosingTimeItem = ({ closingDate }: ClosingTimeItemProps) => {
     const diff = DateTime.fromJSDate(endDate).diff(now, "days").toObject().days;
     if (diff === undefined || diff === null) return "?";
 
-    if (diff < 0) {
-      return "Clôturée";
-    }
-    if (diff < 7) {
-      const days = Math.floor(diff) === 1 ? "jour" : "jours";
-      return "Se clôture dans " + Math.floor(diff) + " " + days;
-    }
-    if (diff < 30) {
-      const weeks = Math.floor(diff / 7) === 1 ? "semaine" : "semaines";
-      return "Se clôture dans " + Math.floor(diff / 7) + " " + weeks;
-    }
-    if (diff < 365) {
-      return "Se clôture dans " + Math.floor(diff / 30) + " mois";
-    }
-    if (diff >= 365) {
-      const years = Math.floor(diff / 365) === 1 ? "an" : "ans";
-      return "Se clôture dans " + Math.floor(diff / 365) + " " + years;
+    //Active giftcards
+    if (diff >= 0) {
+      if (diff < 7) {
+        const days = Math.floor(diff) === 1 ? "jour" : "jours";
+        return "Se clôture dans " + Math.floor(diff) + " " + days;
+      }
+      if (diff < 30) {
+        const weeks = Math.floor(diff / 7) === 1 ? "semaine" : "semaines";
+        return "Se clôture dans " + Math.floor(diff / 7) + " " + weeks;
+      }
+      if (diff < 365) {
+        return "Se clôture dans " + Math.floor(diff / 30) + " mois";
+      }
+      if (diff >= 365) {
+        const years = Math.floor(diff / 365) === 1 ? "an" : "ans";
+        return "Se clôture dans " + Math.floor(diff / 365) + " " + years;
+      }
+    } else {
+      //Expired giftcards
+      if (diff > -7) {
+        const days = Math.floor(diff) === -1 ? "jour" : "jours";
+        return "Clôturée il y a " + Math.floor(diff / -1) + " " + days;
+      }
+      if (diff > -30) {
+        const weeks = Math.floor(diff / -7) === 1 ? "semaine" : "semaines";
+        return "Clôturée il y a " + Math.floor(diff / -7) + " " + weeks;
+      }
+      if (diff > -365) {
+        return "Clôturée il y a " + Math.floor(diff / -30) + " mois";
+      }
+      if (diff <= -365) {
+        const years = Math.floor(diff / -365) === 1 ? "an" : "ans";
+        return "Clôturée il y a " + Math.floor(diff / -365) + " " + years;
+      }
     }
   };
 
