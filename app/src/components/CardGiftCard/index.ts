@@ -1,0 +1,1 @@
+export { CardGiftCard } from "./CardGiftCard";
