@@ -1,0 +1,1 @@
+export { BeneficiaryConsumption } from "./BeneficiaryConsumption";

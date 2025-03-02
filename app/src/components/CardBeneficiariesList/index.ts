@@ -1,0 +1,1 @@
+export { CardBeneficiariesList } from "./CardBeneficiariesList";

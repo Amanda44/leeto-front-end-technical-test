@@ -9,32 +9,9 @@ export default {
 
 type Story = StoryObj<typeof ProgressBar>;
 
-export const ListView: Story = {
+export const WithAmounts: Story = {
   args: {
-    viewType: "list",
-    beneficiary: {
-      id: 1,
-      type: "user",
-      firstName: "John",
-      consumption: {
-        allowedAmount: 200,
-        consumedAmount: 40,
-      },
-    },
-  },
-};
-
-export const DetailsView: Story = {
-  args: {
-    viewType: "details",
-    beneficiary: {
-      id: 2,
-      type: "companion",
-      firstName: "Jane",
-      consumption: {
-        allowedAmount: 48,
-        consumedAmount: 1,
-      },
-    },
+    allowedAmount: 200,
+    consumedAmount: 40,
   },
 };

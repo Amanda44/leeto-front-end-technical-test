@@ -8,7 +8,7 @@ export const BeneficiariesList = ({
   beneficiaries: Beneficiary[];
 }) => {
   return (
-    <div className="w-full flex items-center gap-2 text-sm text-grey-500">
+    <div className="w-full flex items-center mt-2 gap-2 text-sm text-grey-500">
       {/* beneficiaries icons */}
       <div className="flex">
         {beneficiaries.map((beneficiary, index) => {
@@ -31,7 +31,7 @@ export const BeneficiariesList = ({
             : " est éligible."}
         </p>
       ) : (
-        <div className="flex">
+        <div className="flex flex-wrap">
           {beneficiaries.map((beneficiary, index) => {
             return (
               <span className="mr-1" key={index}>

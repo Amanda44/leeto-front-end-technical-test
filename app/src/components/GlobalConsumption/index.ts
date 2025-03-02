@@ -1,0 +1,1 @@
+export { GlobalConsumption } from "./GlobalConsumption";
