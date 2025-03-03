@@ -1,10 +1,22 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router";
+import { GiftCardsList } from "./pages/GiftCardsList/GiftCardsList";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import "../src/App.css";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+const root = document.getElementById("root");
+const queryClient = new QueryClient();
+
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/giftcards" element={<GiftCardsList />} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
+} else {
+  console.error("Root element not found");
+}
