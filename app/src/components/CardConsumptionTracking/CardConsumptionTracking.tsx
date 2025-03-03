@@ -8,7 +8,7 @@ export const CardConsumptionTracking = ({
   beneficiaries: Beneficiary[];
 }) => {
   return (
-    <div className="h-full w-full border-[1px] border-grey-100 rounded-lg p-4 md:p-6 m-2">
+    <div className="h-full w-full border-[1px] border-grey-100 rounded-lg p-4 md:p-6">
       <div className="bg-green-50 w-10 h-10 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center mb-4">
         <img src={budget} alt="budget icon" width={24} height={24} />
       </div>

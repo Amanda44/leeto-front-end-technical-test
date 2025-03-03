@@ -1,7 +1,7 @@
 import { CardGiftCard } from "../../components/CardGiftCard";
 import { useMemo, useState } from "react";
 import { useGetActiveGiftCards } from "../../hooks/GiftCardsList/ActiveGiftCards/useGetActiveGiftCards";
-import { useGetArchivedGiftCards } from "../../hooks/GiftCardsList/ArchivedGiftcards/useGetArchivedGiftCards";
+import { useGetArchivedGiftCards } from "../../hooks/GiftCardsList/ArchivedGiftCards/useGetArchivedGiftCards";
 
 export const GiftCardsList = () => {
   const { data: activeGiftCards, isLoading: isActiveGiftCardsLoading } =
@@ -66,11 +66,11 @@ export const GiftCardsList = () => {
         {selectedGiftCards?.map((giftCard) => (
           <div className=" w-80" key={giftCard.id}>
             <CardGiftCard
+              id={giftCard.id}
               allowedAmount={giftCard.allowedAmount}
               consumedAmount={giftCard.consumedAmount}
               closingDate={giftCard.closingDate}
               name={giftCard.name}
-              onClick={() => {}}
             />
           </div>
         ))}
