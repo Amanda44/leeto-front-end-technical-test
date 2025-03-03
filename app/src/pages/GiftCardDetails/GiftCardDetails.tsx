@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router";
 import { GiftCardDetails as GiftCardDetailsComponent } from "../../components/GiftCardDetails";
 import { useGetGiftCardDetails } from "../../hooks/GiftCardDetails/useGetGiftCardDetails";
 import { BackButton } from "../../components/common/BackButton";
+import { Loader } from "../../components/common/Loader";
 
 export const GiftCardDetails = () => {
   const { id } = useParams();
@@ -12,9 +13,8 @@ export const GiftCardDetails = () => {
     navigate(-1);
   };
 
-  /* TODO: make a prettier loader */
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
   /* TODO: manage empty state */
   if (!data) {

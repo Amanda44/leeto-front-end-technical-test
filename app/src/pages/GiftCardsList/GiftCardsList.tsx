@@ -2,6 +2,7 @@ import { CardGiftCard } from "../../components/CardGiftCard";
 import { useMemo, useState } from "react";
 import { useGetActiveGiftCards } from "../../hooks/GiftCardsList/ActiveGiftCards/useGetActiveGiftCards";
 import { useGetArchivedGiftCards } from "../../hooks/GiftCardsList/ArchivedGiftCards/useGetArchivedGiftCards";
+import { Loader } from "../../components/common/Loader";
 
 export const GiftCardsList = () => {
   const { data: activeGiftCards, isLoading: isActiveGiftCardsLoading } =
@@ -30,9 +31,8 @@ export const GiftCardsList = () => {
     }
   }, [activeGiftCards, archivedGiftCards, selectedTab, tabs]);
 
-  /* TODO: make a prettier loader */
   if (isActiveGiftCardsLoading || isArchivedGiftCardsLoading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
   /* TODO: manage empty state */
   return (
