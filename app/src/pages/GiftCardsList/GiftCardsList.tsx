@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { useGetActiveGiftCards } from "../../hooks/GiftCardsList/ActiveGiftCards/useGetActiveGiftCards";
 import { useGetArchivedGiftCards } from "../../hooks/GiftCardsList/ArchivedGiftCards/useGetArchivedGiftCards";
 import { Loader } from "../../components/common/Loader";
+import { Empty } from "../../components/common/Empty";
 
 export const GiftCardsList = () => {
   const { data: activeGiftCards, isLoading: isActiveGiftCardsLoading } =
@@ -31,10 +32,15 @@ export const GiftCardsList = () => {
     }
   }, [activeGiftCards, archivedGiftCards, selectedTab, tabs]);
 
+  // loading
   if (isActiveGiftCardsLoading || isArchivedGiftCardsLoading) {
     return <Loader />;
   }
-  /* TODO: manage empty state */
+  // empty
+  if (!activeGiftCards || !archivedGiftCards)
+    return (
+      <Empty label="Pas de cartes cadeaux ici pour le moment. Revenez plus tard !" />
+    );
   return (
     <div className="h-full w-fullf flex flex-col p-10 font-inter gap-6">
       <h1 className="sm:text-2xl text-xl font-semibold text-blue-600">
