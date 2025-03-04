@@ -1,6 +1,6 @@
-import family from "../../assets/family.svg";
-import { Beneficiary } from "../../types/Beneficiary";
-import { BeneficiariesList } from "../BeneficiariesList";
+import family from "../../../images/family.svg";
+import { Beneficiary } from "../../../types/Beneficiary";
+import { BeneficiariesList } from "./BeneficiariesList";
 
 export const CardBeneficiariesList = ({
   beneficiaries,

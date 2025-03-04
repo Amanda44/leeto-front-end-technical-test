@@ -1,6 +1,6 @@
-import { formatBeneficiaryName } from "../../utils/beneficiaries/formatBeneficiaryName";
-import { BeneficiaryIcon } from "../common/BeneficiaryIcon";
-import { ProgressBar } from "../ProgressBar";
+import { formatBeneficiaryName } from "../../../../utils/beneficiaries/formatBeneficiaryName";
+import { BeneficiaryIcon } from "../../../common/BeneficiaryIcon";
+import { ProgressBar } from "../../../common/ProgressBar";
 import { BeneficiaryConsumptionProps } from "./types";
 
 export const BeneficiaryConsumption = ({

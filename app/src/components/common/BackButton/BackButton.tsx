@@ -1,5 +1,5 @@
 import { BackButtonProps } from "./types";
-import arrowBack from "../../../assets/arrow_back.svg";
+import arrowBack from "../../../images/arrow_back.svg";
 
 export const BackButton = ({ onClick, label }: BackButtonProps) => {
   return (

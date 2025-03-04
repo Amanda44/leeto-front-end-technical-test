@@ -1,5 +1,5 @@
 import { ClosingTimeItemProps } from "./types";
-import clock from "../../assets/clock.svg";
+import clock from "../../../images/clock.svg";
 import { DateTime } from "luxon";
 
 export const ClosingTimeItem = ({ closingDate }: ClosingTimeItemProps) => {

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getArchivedGiftCards } from "./query";
+import { getArchivedGiftCards } from "../../../requests/GiftCardsList/ArchivedGiftCards/getArchivedGiftCards";
 
 export const useGetArchivedGiftCards = () => {
   return useQuery({

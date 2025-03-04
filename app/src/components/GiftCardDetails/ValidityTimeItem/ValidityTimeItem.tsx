@@ -1,5 +1,5 @@
 import { ValidityTimeItemProps } from "./types";
-import calendar from "../../assets/calendar.svg";
+import calendar from "../../../images/calendar.svg";
 import { DateTime } from "luxon";
 
 export const ValidityTimeItem = ({

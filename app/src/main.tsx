@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router";
-import { GiftCardsList } from "./pages/GiftCardsList/GiftCardsList";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "../src/App.css";
+import { BrowserRouter, Routes, Route } from "react-router";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { GiftCardsList } from "./pages/GiftCardsList/GiftCardsList";
 import { GiftCardDetails } from "./pages/GiftCardDetails/GiftCardDetails";
 
 const root = document.getElementById("root");

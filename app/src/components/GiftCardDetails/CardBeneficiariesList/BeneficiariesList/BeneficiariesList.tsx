@@ -1,6 +1,6 @@
-import { Beneficiary } from "../../types/Beneficiary";
-import { formatBeneficiaryName } from "../../utils/beneficiaries/formatBeneficiaryName";
-import { BeneficiaryIcon } from "../common/BeneficiaryIcon";
+import { Beneficiary } from "../../../../types/Beneficiary";
+import { formatBeneficiaryName } from "../../../../utils/beneficiaries/formatBeneficiaryName";
+import { BeneficiaryIcon } from "../../../common/BeneficiaryIcon";
 
 export const BeneficiariesList = ({
   beneficiaries,

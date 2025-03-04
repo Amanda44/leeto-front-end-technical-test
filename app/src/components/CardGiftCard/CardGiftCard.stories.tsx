@@ -11,7 +11,6 @@ type Story = StoryObj<typeof CardGiftCard>;
 
 export const WithItem: Story = {
   args: {
-    onClick: () => console.log("click"),
     name: "Carte cadeaux famille",
     closingDate: "2025-11-11",
     allowedAmount: 100,

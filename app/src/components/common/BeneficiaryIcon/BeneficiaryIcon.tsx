@@ -1,7 +1,6 @@
 import { Beneficiary } from "../../../types/Beneficiary";
 
 export const BeneficiaryIcon = ({ type }: { type: Beneficiary["type"] }) => {
-  // Simple functions
   const getBeneficiaryIcon = () => {
     switch (type) {
       case "user":

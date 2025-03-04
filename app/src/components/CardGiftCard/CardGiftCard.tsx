@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import giftcard from "../../assets/giftcard.svg";
-import { ClosingTimeItem } from "../ClosingTimeItem";
-import { GlobalConsumption } from "../GlobalConsumption";
+import giftcard from "../../images/giftcard.svg";
 import { CardGiftCardProps } from "./types";
+import { ClosingTimeItem } from "../common/ClosingTimeItem";
+import { GlobalConsumption } from "../common/GlobalConsumption";
 
 export const CardGiftCard = ({
   id,

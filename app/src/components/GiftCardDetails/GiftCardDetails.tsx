@@ -1,11 +1,11 @@
 import { GiftCard } from "../../types/GiftCard";
-import giftcard from "../../assets/giftcard.svg";
-import { ValidityTimeItem } from "../ValidityTimeItem";
-import { ClosingTimeItem } from "../ClosingTimeItem";
-import { GiftCardDescription } from "../GiftCardDescription";
-import { CardBeneficiariesList } from "../CardBeneficiariesList";
-import { CardConsumptionTracking } from "../CardConsumptionTracking";
-import { ProgressBar } from "../ProgressBar";
+import giftcard from "../../images/giftcard.svg";
+import { CardBeneficiariesList } from "./CardBeneficiariesList";
+import { CardConsumptionTracking } from "./CardConsumptionTracking";
+import { ProgressBar } from "../common/ProgressBar";
+import { ValidityTimeItem } from "./ValidityTimeItem";
+import { ClosingTimeItem } from "../common/ClosingTimeItem";
+import { GiftCardDescription } from "./GiftCardDescription";
 
 export const GiftCardDetails = ({
   name,

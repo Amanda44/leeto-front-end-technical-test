@@ -1,6 +1,6 @@
-import budget from "../../assets/budget.svg";
-import { Beneficiary } from "../../types/Beneficiary";
-import { BeneficiaryConsumption } from "../BeneficiaryConsumption";
+import budget from "../../../images/budget.svg";
+import { Beneficiary } from "../../../types/Beneficiary";
+import { BeneficiaryConsumption } from "./BeneficiaryConsumption";
 
 export const CardConsumptionTracking = ({
   beneficiaries,
