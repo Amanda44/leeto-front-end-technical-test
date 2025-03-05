@@ -10,7 +10,7 @@ export const ProgressBar = ({
   };
 
   return (
-    <div className="w-full flex items-center gap-2">
+    <div data-testid="progressbar" className="w-full flex items-center gap-2">
       <div className="h-1.5 w-full bg-grey-100 rounded-md">
         <div
           className="h-full bg-blue-200 rounded-md"
