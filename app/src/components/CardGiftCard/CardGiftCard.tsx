@@ -13,7 +13,10 @@ export const CardGiftCard = ({
 }: CardGiftCardProps) => {
   return (
     <Link to={`/giftcard/${id}`}>
-      <div className="h-full w-full flex flex-col gap-2 border-[1px] border-grey-100 rounded-lg p-4 md:p-6 m-2 cursor-pointer">
+      <div
+        data-testid="card-giftcard"
+        className="h-full w-full flex flex-col gap-2 border-[1px] border-grey-100 rounded-lg p-4 md:p-6 m-2 cursor-pointer"
+      >
         <div className="bg-pink-50 w-8 h-8 rounded-lg flex items-center justify-center mb-4">
           <img src={giftcard} alt="giftcard icon" width={16} height={16} />
         </div>
