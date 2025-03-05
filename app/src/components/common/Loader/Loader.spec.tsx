@@ -11,6 +11,6 @@ describe("Loader component", () => {
 
     expect(loaderElement).toBeInTheDocument();
     expect(textElement).toBeInTheDocument();
-    expect(loaderElement).toHaveClass("animate-spin");
+    expect(loaderElement.firstChild).toHaveClass("animate-spin");
   });
 });

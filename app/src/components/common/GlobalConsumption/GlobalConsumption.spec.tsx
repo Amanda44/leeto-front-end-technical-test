@@ -4,11 +4,11 @@ import { GlobalConsumption } from "./GlobalConsumption";
 
 describe("GlobalConsumption", () => {
   it("should render the correct text", () => {
-    const { getByText } = render(
-      <GlobalConsumption allowedAmount={100} consumedAmount={50} />
-    );
+    render(<GlobalConsumption allowedAmount={100} consumedAmount={50} />);
 
-    expect(getByText("50 € dépensé / 100 €")).toBeInTheDocument();
+    expect(
+      screen.getByTestId("global-consumption")?.firstChild?.textContent
+    ).toBe("50 € dépensés / 100 €");
   });
 
   it("should render the ProgressBar component within GlobalConsumption component", () => {

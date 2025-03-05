@@ -54,11 +54,9 @@ describe("BeneficiariesList", () => {
     ];
 
     render(<BeneficiariesList beneficiaries={beneficiaries} />);
-
-    expect(screen.getByText("Vous-même,")).toBeInTheDocument();
-    expect(screen.getByText("Yennefer et")).toBeInTheDocument();
-    expect(screen.getByText("Jaskier")).toBeInTheDocument();
-    expect(screen.getByText("sont éligibles.")).toBeInTheDocument();
+    expect(
+      screen.getByTestId("beneficiaries-list")?.lastChild?.textContent
+    ).toBe("Vous-même,Yennefer etJaskiersont éligibles.");
   });
 
   it("renders beneficiary icons correctly", () => {

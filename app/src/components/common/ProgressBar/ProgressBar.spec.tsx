@@ -23,6 +23,6 @@ describe("ProgressBar", () => {
   it("should render the correct width for the progress bar", () => {
     render(<ProgressBar allowedAmount={100} consumedAmount={75} />);
     const progressBar = screen.getByTestId("progressbar").firstChild;
-    expect(progressBar).toHaveStyle("width: 75%");
+    expect(progressBar?.firstChild).toHaveStyle("width: 75%");
   });
 });

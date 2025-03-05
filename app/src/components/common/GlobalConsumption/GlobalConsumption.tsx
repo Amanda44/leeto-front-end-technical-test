@@ -6,7 +6,7 @@ export const GlobalConsumption = ({
   consumedAmount,
 }: GlobalConsumptionProps) => {
   return (
-    <div>
+    <div data-testid="global-consumption">
       <div className="text-grey-500 text-xs">
         {consumedAmount} € dépensé{consumedAmount > 1 ? "s" : ""} /{" "}
         {allowedAmount} €
